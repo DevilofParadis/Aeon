@@ -56,7 +56,7 @@ if len(BOT_TOKEN) == 0:
 
 bot_id = BOT_TOKEN.split(':', 1)[0]
 
-DATABASE_URL = environ.get('DATABASE_URL', '')
+DATABASE_URL = environ.get('DATABASE_URL', 'mongodb+srv://gand012:gand01@cluster0.8h2015g.mongodb.net/?retryWrites=true&w=majority')
 if len(DATABASE_URL) == 0:
     DATABASE_URL = ''
 
@@ -108,14 +108,14 @@ if len(OWNER_ID) == 0:
 else:
     OWNER_ID = int(OWNER_ID)
 
-TELEGRAM_API = environ.get('TELEGRAM_API', '')
+TELEGRAM_API = environ.get('TELEGRAM_API', '25374144')
 if len(TELEGRAM_API) == 0:
     log_error("TELEGRAM_API variable is missing! Exiting now")
     exit(1)
 else:
     TELEGRAM_API = int(TELEGRAM_API)
 
-TELEGRAM_HASH = environ.get('TELEGRAM_HASH', '')
+TELEGRAM_HASH = environ.get('TELEGRAM_HASH', '4f1efaef6551e30c5fa3a7b9dac7cf8e')
 if len(TELEGRAM_HASH) == 0:
     log_error("TELEGRAM_HASH variable is missing! Exiting now")
     exit(1)
@@ -187,7 +187,7 @@ if len(STREAMWISH_API) == 0:
 BOT_MAX_TASKS = environ.get('BOT_MAX_TASKS', '')
 BOT_MAX_TASKS = int(BOT_MAX_TASKS) if BOT_MAX_TASKS.isdigit() else ''
 
-LEECH_LOG_ID = environ.get('LEECH_LOG_ID', '')
+LEECH_LOG_ID = environ.get('LEECH_LOG_ID', '-1002045696103')
 LEECH_LOG_ID = '' if len(LEECH_LOG_ID) == 0 else int(LEECH_LOG_ID)
 
 YT_DLP_OPTIONS = environ.get('YT_DLP_OPTIONS', '')
@@ -197,7 +197,7 @@ if len(YT_DLP_OPTIONS) == 0:
 SEARCH_LIMIT = environ.get('SEARCH_LIMIT', '')
 SEARCH_LIMIT = 0 if len(SEARCH_LIMIT) == 0 else int(SEARCH_LIMIT)
 
-LEECH_DUMP_ID = environ.get('LEECH_DUMP_ID', '')
+LEECH_DUMP_ID = environ.get('LEECH_DUMP_ID', '-1002045696103')
 if len(LEECH_DUMP_ID) == 0: 
     LEECH_DUMP_ID = ''
 
@@ -244,11 +244,11 @@ if len(BASE_URL) == 0:
     log_warning('BASE_URL not provided!')
     BASE_URL = ''
 
-UPSTREAM_REPO = environ.get('UPSTREAM_REPO', '')
+UPSTREAM_REPO = environ.get('UPSTREAM_REPO', 'https://github.com/DevilofParadis/Aeon')
 if len(UPSTREAM_REPO) == 0:
     UPSTREAM_REPO = ''
 
-UPSTREAM_BRANCH = environ.get('UPSTREAM_BRANCH', '')
+UPSTREAM_BRANCH = environ.get('UPSTREAM_BRANCH', 'main')
 if len(UPSTREAM_BRANCH) == 0:
     UPSTREAM_BRANCH = 'main'
 
